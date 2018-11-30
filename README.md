@@ -19,4 +19,4 @@ A C++ Compiler.
 
 You can call the program using
 
-	wlgen
+	dictionary-generator
