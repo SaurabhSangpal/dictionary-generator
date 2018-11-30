@@ -21,4 +21,4 @@ A C++ Compiler.
 
 You can call the program using
 
-	dictionary-generator
+	./dictionary-generator
