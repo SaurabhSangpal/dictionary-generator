@@ -3,7 +3,7 @@ language: cpp
 matrix:
     include:
         - os: linux
-        addons:
+          addons:
             apt:
                 sources:
                     - ubuntu-toolchain-r-test
