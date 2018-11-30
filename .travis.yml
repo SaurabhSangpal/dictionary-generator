@@ -1,6 +1,6 @@
 language: cpp
 
-script: cmake
+script: cmake . && make
 
 matrix:
     include:
