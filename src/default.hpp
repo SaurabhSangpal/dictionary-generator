@@ -1,6 +1,7 @@
 #pragma once
 
-/* Handles input if no arguments are provided. Allows the user to input
+/*
+** Handles input if no arguments are provided. Allows the user to input
 ** the values manually.
 */
 
