@@ -1,13 +1,11 @@
 language: cpp
 
-script: cmake . && make && sonar-scanner
+script: cmake . && make
 
 matrix:
     include:
         - os: linux
           addons:
-            sonarcloud:
-              organization: "sonarcloud"
             apt:
                 sources:
                     - ubuntu-toolchain-r-test
