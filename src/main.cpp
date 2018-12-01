@@ -1,7 +1,7 @@
 #include "default.hpp"
 #include "generator.hpp"
 
-int main() {
+int main(int argc, char** argv) {
 	std::vector<std::string> input;
 	no_input(input);
 	std::vector<std::string> output;

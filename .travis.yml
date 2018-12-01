@@ -1,6 +1,6 @@
 language: cpp
 
-script: configure
+script: ./configure
 
 matrix:
     include:
