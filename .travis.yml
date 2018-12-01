@@ -1,6 +1,9 @@
 language: cpp
 
-script: ./configure
+script: 
+  - cmake -DCMAKE_BUILD_TYPE=Debug .
+    make
+    sonar-scanner
 
 matrix:
     include:
