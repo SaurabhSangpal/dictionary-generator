@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-
-#export CXX=g++-7
-
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make
-sonar-scanner
