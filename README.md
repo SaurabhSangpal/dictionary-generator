@@ -1,4 +1,5 @@
 # dictionary-generator
+
 Simple C++ program that generates a dictionary to perform dictionary attacks.
 
 ![Travis-CI](https://travis-ci.org/saurabhsangpal/dictionary-generator.svg?branch=master)
