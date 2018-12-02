@@ -1,6 +1,6 @@
-#include "inputfile.hpp"
+#include "files.hpp"
 
-void arg::open_file(const char* x)
+void arg::open_input_file(const char* x)
 {
 	try {
 		input_file.open(x);
@@ -10,15 +10,35 @@ void arg::open_file(const char* x)
 			throw "File is empty!";
 	}
 	catch (const char* esc) {
-		std::cout << "Error: " << esc << std::endl;
+		std::cerr << "Error: " << esc << std::endl;
 	}
 }
 
-void arg::close_file()
+void arg::close_input_file()
 {
 	if (input_file.is_open())
 		input_file.close();
 	input_file.clear();
+}
+
+void arg::open_output_file(const char* x)
+{
+	try {
+		output_file.open(x, std::fstream::app);
+		if (output_file.fail()) {
+			throw "Failed to open file!";
+		}
+	}
+	catch (const char* esc) {
+		std::cerr << "Error: " << esc << std::endl;
+	}
+}
+
+void arg::close_output_file()
+{
+	if (output_file.is_open())
+		output_file.close();
+	output_file.clear();
 }
 
 std::vector<std::string> arg::read_file()
@@ -34,4 +54,9 @@ std::vector<std::string> arg::read_file()
 	}
 	delete tmp;
 	return tmp_vec;
+}
+
+void arg::write_to_out(std::string& x)
+{
+	output_file << x << std::endl;
 }

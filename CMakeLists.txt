@@ -10,9 +10,9 @@ project(dictionary-generator)
 set(source src/main.cpp
 		src/default.cpp
 		src/generator.cpp
-		src/inputfile.cpp)
+		src/files.cpp)
 set(headers src/default.hpp
 		src/generator.hpp
-		src/inputfile.hpp)
+		src/files.hpp)
 
 add_executable(dictionary-generator ${source} ${headers})
