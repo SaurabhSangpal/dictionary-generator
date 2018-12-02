@@ -29,8 +29,8 @@ You can call the program using
 
 You can specify a file that contains the input keywords using
 
-	./dictionary-generator _inputfile_
+	./dictionary-generator <inputfile>
 
 You can also specify an output file using
 
-	./dictionary-generator _inputfile_ _outputfile_
+	./dictionary-generator <inputfile> <outputfile>
