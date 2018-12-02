@@ -1,6 +1,6 @@
 #include "default.hpp"
 #include "generator.hpp"
-#include "inputfile.hpp"
+#include "files.hpp"
 
 int main(int argc, char* argv[]) {
 	/*std::cout << argc << std::endl;
@@ -20,15 +20,29 @@ int main(int argc, char* argv[]) {
 		output = generator(input);
 		break;
 	case 2:
-		arg parse;
-		parse.open_file(argv[argc-1]);
-		input = parse.read_file();
-		parse.close_file();
+	{
+		arg file;
+		file.open_input_file(argv[argc-1]);
+		input = file.read_file();
+		file.close_input_file();
 		output = generator(input);
+		for (auto i : output)
+			std::cout << i << std::endl;
 		break;
 	}
-	for (auto i : output) {
-		std::cout << i << std::endl;
+	case 3:
+	{
+		arg file;
+		file.open_input_file(argv[argc-2]);
+		input = file.read_file();
+		file.close_input_file();
+		output = generator(input);
+		file.open_output_file(argv[argc-1]);
+		for (auto i : output) 
+			file.write_to_out(i);
+		file.close_output_file();
+		break;
+	}
 	}
 	return 0;
 }

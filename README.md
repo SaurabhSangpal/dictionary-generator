@@ -21,6 +21,16 @@ A C++ Compiler.
 	cmake -DCMAKE_BUILD_TYPE=Release ..
 	make
 
+## Usage Instructions
+
 You can call the program using
 
 	./dictionary-generator
+
+You can specify a file that contains the input keywords using
+
+	./dictionary-generator <inputfile>
+
+You can also specify an output file using
+
+	./dictionary-generator <inputfile> <outputfile>

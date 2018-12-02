@@ -13,8 +13,12 @@ class arg
 {
 private:
 	std::ifstream input_file;
+	std::ofstream output_file;
 public:
-	void open_file(const char* x);
-	void close_file();
+	void open_input_file(const char* x);
+	void close_input_file();
+	void open_output_file(const char* x);
+	void close_output_file();
 	std::vector<std::string> read_file();
+	void write_to_out(std::string& x);
 };
