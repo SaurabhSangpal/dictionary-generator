@@ -8,5 +8,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <algorithm>
+#include <numeric>
 
 std::vector<std::string> generator(std::vector<std::string>& x);
